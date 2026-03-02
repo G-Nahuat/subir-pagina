@@ -1,0 +1,293 @@
+
+ body { font-family: 'Poppins', sans-serif; }
+  .bg-lila { background-color: #f5efff; }
+  .text-purple { color: #4C1D95; }
+  .border-purple { border: 1.5px solid #7C3AED !important; }
+  .btn-pill {
+      border-radius: 20px;
+      background: #e5e0f3;
+      color: #4C1D95;
+      padding: 0.4rem 1.2rem;
+      border: none;
+      margin-right: 0.5rem;
+  }
+  .btn-purple {
+      background-color: #6D28D9;
+      color: white;
+      border-radius: 999px;
+      padding: 0.5rem 2rem;
+      border: none;
+  }
+  input.form-control, textarea.form-control {
+      border-radius: 20px !important;
+      border: 1.5px solid #7C3AED !important;
+  }
+  .info-card {
+      border: 1.5px solid #7C3AED;
+      border-radius: 2rem;
+      padding: 2rem;
+      text-align: center;
+      background: white;
+  }
+  .custom-upload {
+      display: inline-block;
+      border: 2px dashed #7C3AED;
+      border-radius: 1rem;
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      color: #4C1D95;
+      width: 100%;
+  }
+  .custom-upload.dragover { background-color: #f2e7ff; }
+  .custom-upload i { font-size: 1.5rem; }
+  .img-container {
+      position: relative;
+      display: inline-block;
+      margin: 0.25rem;
+  }
+  .img-container img {
+      width: 80px; height: 80px;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      transition: 0.3s;
+  }
+  .img-container:hover img { filter: brightness(70%); }
+  .remove-btn {
+      position: absolute; top: 5px; right: 5px;
+      background: rgba(0,0,0,0.7); color: white;
+      border: none; border-radius: 50%;
+      width: 20px; height: 20px;
+      font-size: 12px; line-height: 20px;
+      text-align: center; cursor: pointer;
+  }
+  #previewImages img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      margin-right: 0.5rem;
+  }
+  .customTooltip {
+      background: #ffffff;
+      border: 2px solid #7C3AED;
+      border-radius: 20px;
+      padding: 15px;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 0 30px rgba(124, 58, 237, 0.25);
+      color: #1e1e1e;
+      font-size: 16px;
+      animation: fadeInTour 0.3s ease-in-out;
+  }
+  .customTooltip .introjs-arrow { border-color: #7C3AED !important; }
+  .customTooltip .introjs-button {
+      border-radius: 999px;
+      padding: 6px 20px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all 0.3s ease;
+  }
+  .customTooltip .introjs-nextbutton {
+      background-color: #6D28D9;
+      color: white;
+      border: none;
+  }
+  .customTooltip .introjs-prevbutton {
+      background-color: #E0D4FA;
+      color: #4C1D95;
+      border: none;
+  }
+  .customTooltip .introjs-donebutton {
+      background-color: #16A34A;
+      color: white;
+      border: none;
+  }
+  .customTooltip .introjs-progress {
+      background-color: #7C3AED;
+      height: 4px;
+      border-radius: 999px;
+  }
+  @keyframes fadeInTour {
+      from { transform: translateY(10px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+  }
+
+.customTooltip {
+  background: #ffffff; 
+  border: 2px solid #7C3AED;
+  border-radius: 20px;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.25); 
+  color: #1e1e1e;
+  font-size: 16px;
+  animation: fadeInTour 0.3s ease-in-out;
+}
+
+.customTooltip .introjs-arrow {
+  border-color: #7C3AED !important;
+}
+
+.customTooltip .introjs-button {
+  border-radius: 999px;
+  padding: 6px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.customTooltip .introjs-nextbutton {
+  background-color: #6D28D9;
+  color: white;
+  border: none;
+}
+
+.customTooltip .introjs-prevbutton {
+  background-color: #E0D4FA;
+  color: #4C1D95;
+  border: none;
+}
+
+.customTooltip .introjs-donebutton {
+  background-color: #16A34A;
+  color: white;
+  border: none;
+}
+
+.customTooltip .introjs-progress {
+  background-color: #7C3AED;
+  height: 4px;
+  border-radius: 999px;
+}
+
+@keyframes fadeInTour {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.customTooltip {
+  background-color: #ffffff !important;
+  color: #333 !important;
+  border: 1px solid #ccc !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  border-radius: 12px !important;
+  padding: 15px !important;
+}
+ .custom-file-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    border: 2px dashed #c4b5fd;
+    border-radius: 1rem;
+    background-color: #f3f0ff;
+    color: #4c1d95;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .custom-file-upload:hover {
+    background-color: #e9ddff;
+    border-color: #7c3aed;
+  }
+
+  .custom-file-upload input[type="file"] {
+    display: none;
+  }
+
+  .custom-file-upload i {
+    font-size: 1.5rem;
+  }
+  .custom-file-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border: 2px dashed #c4b5fd;
+  border-radius: 1rem;
+  background-color: #f3f0ff;
+  color: #4c1d95;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #e9ddff;
+  border-color: #7c3aed;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+ .barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: white;
+  }
+
+  .barra-superior .logos img {
+    max-height: 70px;
+  }
+
+  .barra-superior .acciones {
+    display: flex;
+    align-items: center;
+     gap: 2rem;
+  }
+
+  .barra-superior .btn-pill {
+    background: #6b21a8;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    margin-left: 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .barra-superior .btn-pill:hover {
+    background-color: #7c3aed;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+  }
+  .card-img-top {
+  border-bottom: 1px solid #eee;
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+.card {
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.015);
+}
+.btn-outline-purple {
+  border: 1.5px solid #7C3AED;
+  color: #7C3AED;
+  background-color: transparent;
+}
+
+.btn-outline-purple:hover {
+  background-color: #7C3AED;
+  color: white;
+}
