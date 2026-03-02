@@ -187,15 +187,30 @@
   <div class="swiper mySwiperCursos">
     <div class="swiper-wrapper">
       @php
-        $hoy = \Carbon\Carbon::now();
-        $cursosOrdenados = ($cursos ?? collect())->sortBy(function($curso) use($hoy) {
-          $r = explode(' - ', $curso->fecha ?? '');
-          $fi = isset($r[0]) ? \Carbon\Carbon::parse(trim($r[0])) : null;
-          $ff = isset($r[1]) ? \Carbon\Carbon::parse(trim($r[1])) : $fi;
-          if($ff && $ff < $hoy) return 1;
-          return 0;
-        });
-      @endphp
+$hoy = \Carbon\Carbon::now();
+
+$cursosOrdenados = ($cursos ?? collect())->sortBy(function($curso) use ($hoy) {
+
+    if (empty($curso->fecha)) {
+        return 1; // mandar al final si no tiene fecha
+    }
+
+    $r = explode(' - ', $curso->fecha);
+
+    try {
+        $fi = isset($r[0]) ? \Carbon\Carbon::parse(trim($r[0])) : null;
+        $ff = isset($r[1]) ? \Carbon\Carbon::parse(trim($r[1])) : $fi;
+    } catch (\Exception $e) {
+        return 1; // si falla el formato, lo manda al final
+    }
+
+    if ($ff && $ff < $hoy) {
+        return 1; // curso pasado
+    }
+
+    return 0; // curso vigente o futuro
+});
+@endphp
 
       @foreach($cursosOrdenados as $curso)
       @php
